@@ -1,0 +1,24 @@
+{
+  "name": "test-app-ts-nats",
+  "version": "1.0.0",
+  "description": "a demo app to test typescript and nats.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node build/server.js",
+    "prestart": "tsc",
+    "build":"docker build -t testimg:latest .",
+    "deploystack":"docker stack deploy -c ../nats-cluster.yaml nats_test",
+    "removestack":"docker stack rm nats_test",
+    "watchlogs":"docker service logs nats_test_testimg --follow",
+    "attachnatsbox":"docker run --network nats_test_nats --rm -it synadia/nats-box"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ts-nats": "^1.2.15"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.5",
+    "typescript": "^3.9.3"
+  }
+}
