@@ -35,5 +35,8 @@ I was unable to find more data about swarm mode and my knowledge of docker/docke
 1. You should see your `testmsg` show up in your window that's watching logs
 
 ## Very helpful links
-
+1. [dockerize a typescript app](https://itnext.io/dockerize-a-typescript-app-in-15-mins-a0e8c1e904b3)
+1. [nats.io docker docs](https://docs.nats.io/nats-server/nats_docker)
+1. [how to setup a typescript + node.js project](https://khalilstemmler.com/blogs/typescript/node-starter-project/)
+which leads to this: 
 `npx tsc --init --rootDir src --outDir build --esModuleInterop --resolveJsonModule --lib es6 --module commonjs --allowJs true --noImplicitAny true`
